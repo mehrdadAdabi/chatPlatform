@@ -1,0 +1,29 @@
+.nameAndFamily {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.form {
+  display: flex;
+  max-width: 500px;
+  gap: 10px;
+  flex-direction: column;
+  margin: 300px auto;
+
+  & .focuse + label {
+    transform: translate(0, -17px) scale(0.8);
+  }
+
+  & .haveAccount {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: white;
+
+    & a {
+      text-decoration: none;
+      color: white;
+    }
+  }
+}
