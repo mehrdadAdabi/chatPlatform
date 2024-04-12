@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { PageProps } from "./styleTypes";
 
 export const theme = {
   main: "#252525",
@@ -62,4 +63,39 @@ export const Button = styled.button`
   cursor: pointer;
 `;
 
-export const Page = styled.div``;
+export const Page = styled.div<PageProps>`
+  display: ${(props) => props.display};
+  justify-content: ${(props) => props.justifyContent};
+  width: 100%;
+`;
+
+export const ConversationSideBarStyle = styled.aside`
+  width: 250px;
+  height: 100vh;
+  background: #232121;
+  box-sizing: border-box;
+  border-right: 1px solid blue;
+
+  & header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    padding: 10px;
+    font-size: 10pt;
+    text-align: left;
+    box-sizing: border-box;
+    border-bottom: 1px solid #403e3e;
+  }
+`;
+
+export const ConversationChannelPageStyle = styled.div`
+  display: block;
+  width: 100%;
+  height: 100vh;
+  padding: 10px;
+  box-sizing: border-box;
+  background: red;
+`;
+
+export const ConversationPanelStyle = styled.div``;
