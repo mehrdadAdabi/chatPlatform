@@ -74,7 +74,7 @@ export const ConversationSideBarStyle = styled.aside`
   height: 100vh;
   background: #232121;
   box-sizing: border-box;
-  border-right: 1px solid blue;
+  border-right: 1px solid #4d4d4f;
 
   & header {
     display: flex;
@@ -99,3 +99,47 @@ export const ConversationChannelPageStyle = styled.div`
 `;
 
 export const ConversationPanelStyle = styled.div``;
+
+export const ConversationMessageBox = styled.div`
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+`;
+
+export const ConversationSideBarItem = styled.div`
+  display: flex;
+  width: 100%;
+  gap: 15px;
+  align-items: center;
+  border-bottom: 1px solid #727171;
+  box-sizing: border-box;
+  padding: 10px;
+
+  & .image {
+    width: 40px;
+    height: 40px;
+    background: white;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+
+  & img {
+    width: 100%;
+    height: 100%;
+  }
+
+  & div {
+    color: white;
+    & span {
+      font-size: 11pt;
+    }
+    & p {
+      font-size: 9pt;
+      margin: 0;
+    }
+  }
+
+  &:last-child {
+    border-bottom: unset;
+  }
+`;
