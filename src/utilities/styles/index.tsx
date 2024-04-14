@@ -75,17 +75,25 @@ export const ConversationSideBarStyle = styled.aside`
   background: #232121;
   box-sizing: border-box;
   border-right: 1px solid #4d4d4f;
+  overflow-y: scroll;
 
   & header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    box-sizing: border-box;
+    font-weight: bold;
     color: white;
     padding: 10px;
     font-size: 10pt;
     text-align: left;
-    box-sizing: border-box;
     border-bottom: 1px solid #403e3e;
+  }
+
+  &::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+    background-color: #3d3d3d;
   }
 `;
 
@@ -110,10 +118,11 @@ export const ConversationSideBarItem = styled.div`
   display: flex;
   width: 100%;
   gap: 15px;
+  padding: 10px;
+  cursor: pointer;
   align-items: center;
   border-bottom: 1px solid #727171;
   box-sizing: border-box;
-  padding: 10px;
 
   & .image {
     width: 40px;
